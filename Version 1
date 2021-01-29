@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Dice Roller v1.0
+  </title>
+  <center><h1>
+    Mob Health Tracker
+  </h1></center>
+  <style type="text/css">
+  fieldset {
+    width: 420px;
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  button {
+    display: block;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    float: left;
+  }
+  div.health-box {
+    position: relative;
+    overflow: hidden;
+    top: 18px;
+    left: 90px;
+    width: 300px;
+    height: 22px;
+  }
+  div.name-box {
+    position: relative;
+    overflow: hidden;
+    top: 10px;
+    left: 90px;
+    width: 300px;
+    height: 22px;
+  }
+  </style>
+</head>
+
+<body>
+
+  <fieldset>
+                                          <!-- TOP  BUTTONS -->
+    <button type="button" onclick="d4()">
+      D4
+    </button>
+    <button type="button" onclick="d6()">
+      D6
+    </button>
+    <button type="button" onclick="d8()">
+      D8
+    </button>
+    <button type="button" onclick="d10()">
+      D10
+    </button>
+    <button type="button" onclick="d12()">
+      D12
+    </button>
+    <button type="button" onclick="d20()">
+      D20
+    </button>
+    <button type="button" onclick="d100()">
+      D100
+    </button>
+                                          <!-- Display Fields -->
+            <!--  TEST  -->
+        <span id = "roll">0</span>
+
+
+    <div class="name-box">
+      <input type="text" placeholder="Enemy Name" name="display" size="20">
+    </div>
+    <div class="health-box">
+      <input type="text" id="roll" placeholder="Enemy Health" name="displayResult" size="20">
+    </div>
+  </fieldset>
+
+  <script type="text/javascript">
+
+  var Health = 42;
+
+  function d4(){
+    var roll = document.getElementById("roll");
+    var D4roll = Math.ceil(Math.random() * 4);
+    roll.innerHTML = D4roll;
+  }
+  function d6(){
+    var roll = document.getElementById("roll");
+    var D6roll = Math.ceil(Math.random() * 6);
+    roll.innerHTML = D6roll;
+  }
+  function d8(){
+    var roll = document.getElementById("roll");
+    var D8roll = Math.ceil(Math.random() * 8);
+    roll.innerHTML = D8roll;
+  }
+  function d10(){
+    var roll = document.getElementById("roll");
+    var D10roll = Math.ceil(Math.random() * 10);
+    roll.innerHTML = D10roll;
+  }
+  function d12(){
+    var roll = document.getElementById("roll");
+    var D12roll = Math.ceil(Math.random() * 12);
+    roll.innerHTML = D12roll;
+  }
+  function d20(){
+    var roll = document.getElementById("roll");
+    var D20roll = Math.ceil(Math.random() * 20);
+    roll.innerHTML = D20roll;
+  }
+  function d100(){
+    var roll = document.getElementById("roll");
+    var D100roll = Math.ceil(Math.random() * 100);
+    roll.innerHTML = D100roll;
+  }
+
+
+  </script>
+</body>
+
+</html>
